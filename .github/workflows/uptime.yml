@@ -1,0 +1,27 @@
+name: Weekly Uptime Check
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Mondays at 08:00 UTC
+  workflow_dispatch:      # Allow manual triggers
+  
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check site availability
+        run: |
+          if curl -f -I --silent --fail https://grigbilham.com/; then
+            echo "✅ Site is up and running"
+          else
+            echo "❌ Site is down"
+            exit 1
+          fi
+      
+      - name: Verify HTTPS redirect
+        run: |
+          response=$(curl -I -s -o /dev/null -w "%{http_code}" http://grigbilham.com/)
+          if [ "$response" = "301" ] || [ "$response" = "302" ]; then
+            echo "✅ HTTP to HTTPS redirect is working"
+          else
+            echo "⚠️ HTTP to HTTPS redirect may not be working (Response: $response)"
+          fi
