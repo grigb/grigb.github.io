@@ -1,0 +1,25 @@
+{
+  "added": [
+    "EverArchive",
+    "Metaverse Metadata Directory (MVMD)",
+    "Local Artist Network",
+    "Musely.social",
+    "SumSet Tech",
+    "Trashformers NFT",
+    "XCH Foundation",
+    "Thunkr.ai",
+    "FractalMesh",
+    "Creator Advocacy"
+  ],
+  "updated": [
+    "Distributed Creatives"
+  ],
+  "removed": [
+    "Metaverse Standards Forum",
+    "GitHub Projects",
+    "Neuronaut on YouTube"
+  ],
+  "notes": "DC on top; all 11 projects added as live; legacy header 'Long-Term Initiatives' present; personal contact links added (Twitter/X, LinkedIn, GitHub, YouTube).",
+  "timestamp": "2025-07-20T16:45:00Z",
+  "total_cards": 11
+}
